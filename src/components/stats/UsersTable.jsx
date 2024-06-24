@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InteractiveTable = () => {
+const UsersTable = () => {
   const TableData = [
     { country: 'India', plants: 181370, other: 2, uploads: 181372 },
     { country: 'South Africa', plants: 1602, other: 0, uploads: 1602 },
@@ -77,8 +77,8 @@ const InteractiveTable = () => {
 
 return (
     <div style={{padding:"50px 100px 50px 100px",alignContent:"center"}}>
-      <h1 style={{textAlign:"center"}}>By Countries</h1>
-      <p style={{textAlign:"center"}}>By clicking on the country's name, you can get state / region statistics.</p>
+      <h1 style={{textAlign:"center"}}>By Users</h1>
+      <p style={{textAlign:"center"}}>By clicking on the user name, you can reach user profile</p>
       <table style={tableStyles}>
         <thead>
           <tr>
@@ -117,5 +117,5 @@ return (
   );
 };
 
-export default InteractiveTable;
+export default UsersTable;
 

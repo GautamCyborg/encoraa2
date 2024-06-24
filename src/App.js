@@ -16,6 +16,10 @@ import Footer from "./components/common/Footer";
 
 import { AddressProvider } from "./contexts/AddressContext";
 
+import InteractiveTable from "./components/stats/InteractiveTable"
+import Chart from './components/stats/Chart'
+import UsersTable from "./components/stats/UsersTable";
+
 function App() {
   return (
     <AddressProvider> 
@@ -24,14 +28,18 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Landing/>}/>
-            <Route path="/TreeRegistry" element={<Home/>}/>
-            <Route path="/Contact" element={<Contact/>}/>
-            <Route path="/Technology" element={<Technology/>}/>
-            <Route path="/Upload" element={<Upload/>}/>
-            <Route path="/trees" element={<Search/>}/>
-            <Route path="/signup" element={<Register/>}/>
-            <Route path="/map" element={<Map/>}/>
-            <Route path="/Statistics" element={<Statistics/>}/>
+            <Route path="TreeRegistry" element={<Home/>}/>
+            <Route path="Contact" element={<Contact/>}/>
+            <Route path="Technology" element={<Technology/>}/>
+            <Route path="Upload" element={<Upload/>}/>
+            <Route path="trees" element={<Search/>}/>
+            <Route path="signup" element={<Register/>}/>
+            <Route path="map" element={<Map/>}/>
+            <Route path="statistics" element={<Statistics/>}>
+              <Route path="route" element={<Chart/>}/>
+              <Route path="country" element={<InteractiveTable/>}/>
+              <Route path="users" element={<UsersTable/>}/>
+            </Route>
           </Routes>
         </div>
         <Footer/>
