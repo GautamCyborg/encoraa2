@@ -9,6 +9,7 @@ import Upload from "./pages/Upload";
 import Search from "./pages/Search";
 import Register from "./pages/Register";
 import Map from "./pages/Map";
+import Statistics from "./pages/Statistics";
 
 import Navbar from "./components/common/Navbar";
 import Footer from "./components/common/Footer";
@@ -23,13 +24,14 @@ function App() {
         <div>
           <Routes>
             <Route path="/" element={<Landing/>}/>
-            <Route path="/Home" element={<Home/>}/>
+            <Route path="/TreeRegistry" element={<Home/>}/>
             <Route path="/Contact" element={<Contact/>}/>
             <Route path="/Technology" element={<Technology/>}/>
             <Route path="/Upload" element={<Upload/>}/>
             <Route path="/trees" element={<Search/>}/>
             <Route path="/signup" element={<Register/>}/>
             <Route path="/map" element={<Map/>}/>
+            <Route path="/Statistics" element={<Statistics/>}/>
           </Routes>
         </div>
         <Footer/>
