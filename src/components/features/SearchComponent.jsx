@@ -1,21 +1,13 @@
-import React, { useState } from 'react';
 //import { useEffect } from 'react';
+import React, { useState } from 'react';
 import BlogCard from '../BlogCard';
 import "../../assets/NewFiles/Css/searchcomponent.css";
-
-const SearchComponent = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filters, setFilters] = useState({
-    treeName: false,
-    uploadedBy: false,
-    location: false,
-  });
 
   // const [data, setData] = useState([]);
 
   // useEffect(() => {
   //   // Retrieve data from local storage
-  //    const storedData = localStorage.getItem('formData'); // Replace 'yourLocalStorageKey' with your actual key
+  //    const storedData = localStorage.getItem('formData');
   
     
   //   if (storedData) {
@@ -37,69 +29,78 @@ const SearchComponent = () => {
   //   }
   // }, []);
 
-  const data=[{
-    image:"images/Tree-images/mango.jpeg",
-    treeName:"Mango",
-    uploadedBy:"User 1",
+
+  
+  const SearchComponent = () => {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [filters, setFilters] = useState({
+      treeName: false,
+      uploadedBy: false,
+      location: false,
+    });
+  
+    const data=[{
+      image:"images/Tree-images/mango.jpeg",
+      treeName:"Mango",
+      uploadedBy:"User 1",
+      location:"Janata Colony, Indore, Madhya Pradesh 452002",
+      plantedOn:"2024-06-23",
+      uploadedOn:"2024-06-23T08:57:03.405Z",
+  },{
+    image:"images/Tree-images/Neem.jpeg",
+    treeName:"Neem",
+    uploadedBy:"User 2",
     location:"Janata Colony, Indore, Madhya Pradesh 452002",
     plantedOn:"2024-06-23",
     uploadedOn:"2024-06-23T08:57:03.405Z",
-},{
-  image:"images/Tree-images/Neem.jpeg",
-  treeName:"Neem",
-  uploadedBy:"User 2",
-  location:"Janata Colony, Indore, Madhya Pradesh 452002",
-  plantedOn:"2024-06-23",
-  uploadedOn:"2024-06-23T08:57:03.405Z",
-},{
-  image:"images/Tree-images/peepal.jpg",
-  treeName:"peepal",
-  uploadedBy:"User 3",
-  location:"Janata Colony, Indore, Madhya Pradesh 452002",
-  plantedOn:"2024-06-23",
-  uploadedOn:"2024-06-23T08:57:03.405Z",
-},{
-  image:"images/Tree-images/Neem.jpeg",
-  treeName:"Neem",
-  uploadedBy:"User 2",
-  location:"Janata Colony, Indore, Madhya Pradesh 452002",
-  plantedOn:"2024-06-23",
-  uploadedOn:"2024-06-23T08:57:03.405Z",
-},{
-  image:"images/Tree-images/peepal.jpg",
-  treeName:"peepal",
-  uploadedBy:"User 3",
-  location:"Janata Colony, Indore, Madhya Pradesh 452002",
-  plantedOn:"2024-06-23",
-  uploadedOn:"2024-06-23T08:57:03.405Z",
-},]
-
-
-  const handleInputChange = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
-  const handleCheckboxChange = (e) => {
-    const { name, checked } = e.target;
-    setFilters({
-      ...filters,
-      [name]: checked,
+  },{
+    image:"images/Tree-images/peepal.jpg",
+    treeName:"peepal",
+    uploadedBy:"User 3",
+    location:"Janata Colony, Indore, Madhya Pradesh 452002",
+    plantedOn:"2024-06-23",
+    uploadedOn:"2024-06-23T08:57:03.405Z",
+  },{
+    image:"images/Tree-images/Neem.jpeg",
+    treeName:"Neem",
+    uploadedBy:"User 2",
+    location:"Janata Colony, Indore, Madhya Pradesh 452002",
+    plantedOn:"2024-06-23",
+    uploadedOn:"2024-06-23T08:57:03.405Z",
+  },{
+    image:"images/Tree-images/peepal.jpg",
+    treeName:"peepal",
+    uploadedBy:"User 3",
+    location:"Janata Colony, Indore, Madhya Pradesh 452002",
+    plantedOn:"2024-06-23",
+    uploadedOn:"2024-06-23T08:57:03.405Z",
+  },]
+  
+  
+    const handleInputChange = (e) => {
+      setSearchTerm(e.target.value);
+    };
+  
+    const handleCheckboxChange = (e) => {
+      const { name, checked } = e.target;
+      setFilters({
+        ...filters,
+        [name]: checked,
+      });
+    };
+  
+    const filteredData = data.filter((item) => {
+      const lowerSearchTerm = searchTerm.toLowerCase();
+      return (
+        (!filters.treeName || item.treeName.toLowerCase().includes(lowerSearchTerm)) &&
+        (!filters.uploadedBy || item.uploadedBy.toLowerCase().includes(lowerSearchTerm)) &&
+        (!filters.location || item.location.toLowerCase().includes(lowerSearchTerm))
+      );
     });
-  };
-
-  const filteredData = data.filter((item) => {
-    const lowerSearchTerm = searchTerm.toLowerCase();
+  
     return (
-      (!filters.treeName || item.treeName.toLowerCase().includes(lowerSearchTerm)) &&
-      (!filters.uploadedBy || item.uploadedBy.toLowerCase().includes(lowerSearchTerm)) &&
-      (!filters.location || item.location.toLowerCase().includes(lowerSearchTerm))
-    );
-  });
-
-  return (
-    <div className="search-component">
-      <div className="filters">
-        <div className="checkbox-group">
+      <div className="search-component">
+        <div className="filters">
           <input
             type="text"
             placeholder="Search..."
@@ -107,41 +108,43 @@ const SearchComponent = () => {
             onChange={handleInputChange}
             className="search-input"
           />
-          <label>
-            <input
-              type="checkbox"
-              name="treeName"
-              checked={filters.treeName}
-              onChange={handleCheckboxChange}
-              className="checkbox-input"
-            />
-            Tree Name
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="uploadedBy"
-              checked={filters.uploadedBy}
-              onChange={handleCheckboxChange}
-              className="checkbox-input"
-            />
-            Uploaded By
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              name="location"
-              checked={filters.location}
-              onChange={handleCheckboxChange}
-              className="checkbox-input"
-            />
-            Location
-          </label>
+          <div className="checkbox-group">
+            <label>
+              <input
+                type="checkbox"
+                name="treeName"
+                checked={filters.treeName}
+                onChange={handleCheckboxChange}
+                className="checkbox-input"
+              />
+              Tree Name
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="uploadedBy"
+                checked={filters.uploadedBy}
+                onChange={handleCheckboxChange}
+                className="checkbox-input"
+              />
+              Uploaded By
+            </label>
+            <label>
+              <input
+                type="checkbox"
+                name="location"
+                checked={filters.location}
+                onChange={handleCheckboxChange}
+                className="checkbox-input"
+              />
+              Location
+            </label>
+          </div>
         </div>
+        <BlogCard data={filteredData} />
       </div>
-      <BlogCard data={filteredData} />
-    </div>
-  );
-};
-
-export default SearchComponent;
+    );
+  };
+  
+  export default SearchComponent;
+  

@@ -42,7 +42,7 @@ const Navbar = () => {
                 <Link to="/technology">Technology</Link>
               </li>
               <li className="header-menu-bg">
-                <Link to="#">Media<i className="fas fa-chevron-down"></i></Link>
+                <Link to="/TreeRegistry">Tree Registry</Link>
               </li>
               <li className="header-menu-bg">
                 <Link to="/trees">Trees</Link>

@@ -36,7 +36,7 @@ const Statistics = () => {
         </button>
         <button 
           onClick={() => navigate("./geographic")} 
-          style={getButtonStyle("country")}
+          style={getButtonStyle("geographic")}
           onMouseEnter={(e) => e.currentTarget.style.filter = hoverStyle.filter}
           onMouseLeave={(e) => e.currentTarget.style.filter = 'none'}
         >
