@@ -20,6 +20,7 @@ import InteractiveTable from "./components/stats/InteractiveTable"
 import Chart from './components/stats/Chart'
 import UsersTable from "./components/stats/UsersTable";
 
+
 function App() {
   return (
     <AddressProvider> 
@@ -36,7 +37,7 @@ function App() {
             <Route path="signup" element={<Register/>}/>
             <Route path="map" element={<Map/>}/>
             <Route path="statistics" element={<Statistics/>}>
-              <Route path="route" element={<Chart/>}/>
+              <Route path="chart" element={<Chart/>}/>
               <Route path="country" element={<InteractiveTable/>}/>
               <Route path="users" element={<UsersTable/>}/>
             </Route>

@@ -45,6 +45,18 @@ const Navbar = () => {
                 <Link to="#">Media<i className="fas fa-chevron-down"></i></Link>
               </li>
               <li className="header-menu-bg">
+                <Link to="/trees">Trees</Link>
+              </li>
+              <li className="header-menu-bg">
+                <Link to="/map">Map</Link>
+              </li>
+              <li className="header-menu-bg">
+                <Link to="/statistics/chart">Statistics</Link>
+              </li>
+              <li className="header-menu-bg">
+                <Link to="/upload">Upload</Link>
+              </li>
+              <li className="header-menu-bg">
                 <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
