@@ -17,7 +17,7 @@ const EventArea = () => {
             <div className="row g-5 g-lg-0 align-items-center">
                 <div className="col-lg-4">
                     <div className="event__image">
-                        <img src="/images/event/event-image1.png" alt="image" />                               
+                        <img src="/images/event/event-image1.png" alt="event" />                               
                     </div>
                 </div>
                 <div className="col-lg-8">

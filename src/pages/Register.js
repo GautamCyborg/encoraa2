@@ -25,7 +25,7 @@ const Register = () => {
            <div className="arry"><img src="/images/icon/arry.png" alt=""/></div>
            <ul>
                <li><a href="https://www.google.com/maps/d/viewer?mid=1UZ57Drfs3SGrTgh6mrYjQktu6uY&amp;hl=en_US&amp;ll=18.672105000000013%2C105.68673800000003&amp;z=17"
-                       target="_blank"><i className="fa-solid fa-location-dot"></i> 407 Payal Complex, B/s VSE,
+                       ><i className="fa-solid fa-location-dot"></i> 407 Payal Complex, B/s VSE,
                         Sayajigunj, 
                        Vadodara-390005</a>
                </li>

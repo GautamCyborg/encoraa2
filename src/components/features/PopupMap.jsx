@@ -100,7 +100,7 @@ const AuditComponent = () => {
         mapRef.current = null;
       }
     };
-  }, []);
+  });
 
   return (
     <div className='map-container'>

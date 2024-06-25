@@ -16,13 +16,13 @@ const BlogCard = ({ data }) => {
                     </div>
                   </div>
                 </div>
-                <h3><a href="">Planted by:{item.uploadedBy}</a></h3>
+                <h3><a href="/">Planted by:{item.uploadedBy}</a></h3>
                 <h2>
                 <p>Uploaded On:  {new Date(item.uploadedOn).toDateString()}</p>
         
                 </h2>
                 <h2> <p>Planted On: {new Date(item.plantedOn).toDateString()}</p></h2>
-                <h2><a href=''><p>Location: {item.location}</p></a></h2>
+                <h2><a href='/'><p>Location: {item.location}</p></a></h2>
               </div>
             </div>
           ))}

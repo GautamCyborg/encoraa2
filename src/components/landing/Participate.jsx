@@ -16,7 +16,7 @@ const Participate = () => {
         <div className="row">
           <div className="col-lg-12">
             <h5 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">
-              <img src="/images/icon/leaf.png" alt="image" /> HOW WE WORK
+              <img src="/images/icon/leaf.png" alt="leaf" /> HOW WE WORK
             </h5>
             <h2 className="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">
               We work together for bettering tomorrow
@@ -120,7 +120,7 @@ const Participate = () => {
               ><i className="fa-solid fa-arrow-right"></i
             ></a>
             <div className="work__item-leaf">
-              <img src="/images/shape/work-leaf.png" alt="" />
+              <img src="/images/shape/work-leaf.png" alt="work-leaf" />
             </div>
           </div>
         </div>
@@ -142,7 +142,7 @@ const Participate = () => {
               ><i className="fa-solid fa-arrow-right"></i
             ></a>
             <div className="work__item-leaf">
-              <img src="/images/shape/work-leaf.png" alt="" />
+              <img src="/images/shape/work-leaf.png" alt="work-leaf" />
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ const Participate = () => {
               ><i className="fa-solid fa-arrow-right"></i
             ></a>
             <div className="work__item-leaf">
-              <img src="/images/shape/work-leaf.png" alt="" />
+              <img src="/images/shape/work-leaf.png" alt="work-leaf" />
             </div>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "../../assets/NewFiles/Css/popuplayout.css"
 
 const PopupLayout = ({ component: Component, isOpen, onClose }) => {

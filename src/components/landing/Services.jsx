@@ -88,7 +88,7 @@ const Services = () => {
             </div>
             <div className="col-xl-4">
                 <div className="image position-relative">
-                    <img src="/images/service/single6.jpg" alt="image"/>
+                    <img src="/images/service/single6.jpg" alt="single"/>
                     <div className="video__btn-wrp">
                         <div className="video-btn video-pulse">
                             <a className="video-popup secondary-bg"

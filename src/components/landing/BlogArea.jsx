@@ -37,7 +37,7 @@ const BlogArea = () => {
                       <div className="col-md-7">
                         <div className="blog__item-left-content">
                           <span className="blog__tag">Environmental</span>
-                          <h3 className="mb-20"><a href="#">The Environmental component assesses how an organization's operations impacts the natural environment. This includes:</a></h3>
+                          <h3 className="mb-20"><a href="/">The Environmental component assesses how an organization's operations impacts the natural environment. This includes:</a></h3>
                           <ul>
                             <li className="mb-20">Resource Management: How efficiently the organization uses natural resources and manages waste.</li>
                             <li className="mb-20">Carbon Footprint: The organization's emissions and efforts to reduce its carbon footprint.</li>

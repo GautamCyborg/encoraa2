@@ -28,7 +28,7 @@ const Footer = () => {
                 </div>
                 <ul>
                   <li className="pb-3">
-                    <a href="#" className="text-white"><i className="fa-solid fa-location-dot pe-1 primary-color"></i>
+                    <a href="/" className="text-white"><i className="fa-solid fa-location-dot pe-1 primary-color"></i>
                       407 Payal Complex, <br/>B/s VSE, Sayajigunj, <br /> Vadodara-390005
                     </a>
                   </li>
@@ -38,7 +38,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:info@encoraa.com" target="_blank" className="text-white"><i className="fa-solid fa-envelope pe-1 primary-color"></i>
+                    <a href="mailto:info@encoraa.com" className="text-white"><i className="fa-solid fa-envelope pe-1 primary-color"></i>
                       info@encoraa.com
                     </a>
                   </li>
@@ -53,27 +53,27 @@ const Footer = () => {
                 </div>
                 <ul>
                   <li className="pb-2">
-                    <a href="#" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
+                    <a href="/" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
                       Water Conservation
                     </a>
                   </li>
                   <li className="pb-2">
-                    <a href="#" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
+                    <a href="/" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
                       Eco System
                     </a>
                   </li>
                   <li className="pb-2">
-                    <a href="#" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
+                    <a href="/" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
                       Plastic Recycling
                     </a>
                   </li>
                   <li className="pb-2">
-                    <a href="#" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
+                    <a href="/" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
                       Urban Planning
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
+                    <a href="/" className="text-white"><i className="fa-solid fa-chevron-right pe-1 primary-color"></i>
                       Save Green House
                     </a>
                   </li>
@@ -88,19 +88,19 @@ const Footer = () => {
                 </div>
                 <ul className="footer__item-blog">
                   <li className="pb-3">
-                    <img src="/images/footer/01.png" height="60" alt="image"/>
+                    <img src="/images/footer/01.png" height="60" alt="plants"/>
                     <div className="ms-3">
                       <h5>
-                        <a href="#" className="text-white">Close up picture of the sapling</a>
+                        <a href="/" className="text-white">Close up picture of the sapling</a>
                       </h5>
                       <span>2 weeks ago</span>
                     </div>
                   </li>
                   <li>
-                    <img src="/images/footer/02.png" height="60" alt="image"/>
+                    <img src="/images/footer/02.png" height="60" alt="plants"/>
                     <div className="ms-3">
                       <h5>
-                        <a href="#" className="text-white">Close up picture of the sapling</a>
+                        <a href="/" className="text-white">Close up picture of the sapling</a>
                       </h5>
                       <span>2 weeks ago</span>
                     </div>
