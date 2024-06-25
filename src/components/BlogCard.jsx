@@ -7,10 +7,10 @@ const BlogCard = ({ data }) => {
         <div className="row g-4">
           {data.map((item, index) => (
             <div key={index} className="col-lg-4 col-md-6 wow fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s">
-              <div className="donation__item blog-two__item bor">
+              <div className="donation__item blog-two__item bor" style={{ height: '100%' }}>
                 <div className="blog-two__image mb-85">
                   <div className="image">
-                    <img src={item.image} alt={item.treeName} />
+                    <img src={item.image} alt={item.treeName} style={{ height: '100%' }} />
                     <div className="blog-two__info">
                       <h4>{item.treeName}</h4>
                     </div>

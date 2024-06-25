@@ -38,8 +38,8 @@ function App() {
             <Route path="map" element={<Map/>}/>
             <Route path="statistics" element={<Statistics/>}>
               <Route path="chart" element={<Chart/>}/>
-              <Route path="country" element={<InteractiveTable/>}/>
-              <Route path="users" element={<UsersTable/>}/>
+              <Route path="geographic" element={<InteractiveTable/>}/>
+              <Route path="top50users" element={<UsersTable/>}/>
             </Route>
           </Routes>
         </div>

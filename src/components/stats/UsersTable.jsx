@@ -2,24 +2,23 @@ import React from 'react';
 
 const UsersTable = () => {
   const TableData = [
-    { country: 'India', plants: 181370, other: 2, uploads: 181372 },
-    { country: 'South Africa', plants: 1602, other: 0, uploads: 1602 },
-    { country: 'Location not updated by users', plants: 1594, other: 1, uploads: 1595 },
-    { country: 'United Kingdom', plants: 1415, other: 0, uploads: 1415 },
-    { country: 'Malaysia', plants: 999, other: 0, uploads: 999 },
-    { country: 'Sri Lanka', plants: 146, other: 0, uploads: 146 },
-    { country: 'United States of America', plants: 123, other: 0, uploads: 123 },
-    { country: 'Indonesia', plants: 19, other: 0, uploads: 19 },
-    { country: 'Oman', plants: 14, other: 0, uploads: 14 },
-    { country: 'Spain', plants: 13, other: 0, uploads: 13 },
-    { country: 'Australia', plants: 12, other: 0, uploads: 12 },
-    { country: 'Egypt', plants: 11, other: 0, uploads: 11 },
-    { country: 'Nepal', plants: 8, other: 0, uploads: 8 },
-    { country: 'Bhutan', plants: 8, other: 0, uploads: 8 },
-    { country: 'Taiwan', plants: 8, other: 0, uploads: 8 },
+    { name: 'user1', plants: 181370, other: 2, uploads: 181372 },
+    { name: 'user2', plants: 1602, other: 0, uploads: 1602 },
+    { name: 'user 3', plants: 1594, other: 1, uploads: 1595 },
+    { name: 'user 4', plants: 1415, other: 0, uploads: 1415 },
+    { name: 'user 5', plants: 999, other: 0, uploads: 999 },
+    { name: 'user 6', plants: 146, other: 0, uploads: 146 },
+    { name: 'user 7', plants: 123, other: 0, uploads: 123 },
+    { name: 'user 8', plants: 19, other: 0, uploads: 19 },
+    { name: 'user 9', plants: 14, other: 0, uploads: 14 },
+    { name: 'user 10', plants: 13, other: 0, uploads: 13 },
+    { name: 'user 11', plants: 12, other: 0, uploads: 12 },
+    { name: 'user 12', plants: 11, other: 0, uploads: 11 },
+    { name: 'user 13', plants: 8, other: 0, uploads: 8 },
+    { name: 'user 14', plants: 8, other: 0, uploads: 8 },
+    { name: 'user 15', plants: 8, other: 0, uploads: 8 },
   ];
 
-  console.log(TableData)
   // Function to calculate totals
   const calculateTotals = (TableData) => {
     let totalPlants = 0;
@@ -30,7 +29,7 @@ const UsersTable = () => {
       totalOther += row.other;
       totalUploads += row.uploads;
     });
-    return { country: 'Total', plants: totalPlants, other: totalOther, uploads: totalUploads };
+    return { name: 'Total', plants: totalPlants, other: totalOther, uploads: totalUploads };
   };
 
   // Add the total row to the TableData
@@ -82,7 +81,7 @@ return (
       <table style={tableStyles}>
         <thead>
           <tr>
-            <th style={thStyles}>Country</th>
+            <th style={thStyles}>Name</th>
             <th style={thStyles}>Plants</th>
             <th style={thStyles}>Other</th>
             <th style={thStyles}>Uploads</th>
@@ -90,19 +89,19 @@ return (
         </thead>
         <tbody>
           {dataWithTotal.map((row, index) => (
-            <tr key={index} style={row.country !== 'Total' ? trStyles : totalRowStyles}>
+            <tr key={index} style={row.name !== 'Total' ? trStyles : totalRowStyles}>
               <td style={tdStyles}>
-                {row.country === 'Total' ? (
-                  <span style={{color:'black'}}>{row.country}</span>
+                {row.name === 'Total' ? (
+                  <span style={{color:'black'}}>{row.name}</span>
                 ) : (
                   <a
-                    href="#"
+                    href="/"
                     style={aStyles}
                     onMouseOver={(e) => (e.target.style.textDecoration = aHoverStyles.textDecoration)}
                     onMouseOut={(e) => (e.target.style.textDecoration = aStyles.textDecoration)}
-                    onClick={() => alert(`You clicked on ${row.country}`)}
+                    onClick={() => alert(`You clicked on ${row.name}`)}
                   >
-                    {row.country}
+                    {row.name}
                   </a>
                 )}
               </td>

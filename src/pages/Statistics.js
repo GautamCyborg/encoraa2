@@ -35,7 +35,7 @@ const Statistics = () => {
           Default
         </button>
         <button 
-          onClick={() => navigate("./country")} 
+          onClick={() => navigate("./geographic")} 
           style={getButtonStyle("country")}
           onMouseEnter={(e) => e.currentTarget.style.filter = hoverStyle.filter}
           onMouseLeave={(e) => e.currentTarget.style.filter = 'none'}
@@ -43,7 +43,7 @@ const Statistics = () => {
           Geographic
         </button>
         <button 
-          onClick={() => navigate("./users")} 
+          onClick={() => navigate("./top50users")} 
           style={getButtonStyle("users")}
           onMouseEnter={(e) => e.currentTarget.style.filter = hoverStyle.filter}
           onMouseLeave={(e) => e.currentTarget.style.filter = 'none'}

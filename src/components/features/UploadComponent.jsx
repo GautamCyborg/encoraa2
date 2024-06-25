@@ -3,11 +3,11 @@ import EXIF from "exif-js";
 import PopupMap from "./PopupMap";
 import PopupLayout from "./PopupLayout";
 import { AddressContext } from "../../contexts/AddressContext";
-import DefaultImage from '../../assets/NewFiles/images/01.jpg';
+import DefaultImage from "../../assets/NewFiles/images/01.jpg";
 
 const UploadComponent = () => {
   const [image, setImage] = useState(null);
-  const [label, setLabel] = useState("");
+  const [treeName, settreeName] = useState("");
   const [location, setLocation] = useState("");
   const [coordinates, setCoordinates] = useState(null);
   const [plantedOn, setPlantedOn] = useState("");
@@ -69,7 +69,7 @@ const UploadComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!image || !label || !location || !plantedOn) {
+    if (!image || !treeName || !location || !plantedOn) {
       setError("Please provide all required information.");
       return;
     }
@@ -79,7 +79,7 @@ const UploadComponent = () => {
     const formData = {
       imageURL,
       image: image.name,
-      label,
+      treeName,
       location,
       coordinates,
       plantedOn,
@@ -97,7 +97,7 @@ const UploadComponent = () => {
 
     // Clear the context and reset form fields after submission
     setImage(null);
-    setLabel("");
+    settreeName("");
     setLocation("");
     setCoordinates(null);
     setAddress("");
@@ -181,35 +181,33 @@ const UploadComponent = () => {
 
                     <input
                       type="text"
-                      value={label}
-                      onChange={(e) => setLabel(e.target.value)}
-                      placeholder="Label"
+                      value={treeName}
+                      onChange={(e) => settreeName(e.target.value)}
+                      placeholder="Tree Name"
                     />
 
-                    <input
-                      type="text"
-                      placeholder="Location"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                    />
-
-                    <input
-                      type="date"
-                      value={plantedOn}
-                      onChange={(e) => setPlantedOn(e.target.value)}
-                      placeholder="Planted On"
-                    />
-
-                    <div>
+                    <div style={{ display: "flex", alignItems: "center" }}>
+                      <input
+                        type="text"
+                        placeholder="Select Location From Map"
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                        readOnly
+                        style={{
+                          flex: "1",
+                          marginRight: "10px",
+                        }}
+                      />
                       <button
                         type="button"
                         className="fa-solid"
                         onClick={openPopup}
                         style={{
+                          height: "60px",
                           paddingRight: "55px",
                           paddingLeft: "55px",
-                          marginBottom: "10px",
-                          backgroundColor: "#476A77",
+                          marginBottom: "20px",
+                          backgroundColor: "#3E6294",
                         }}
                       >
                         📍
@@ -220,6 +218,14 @@ const UploadComponent = () => {
                         onClose={closePopup}
                       />
                     </div>
+
+                    <input
+                      type="datetime-local"
+                      value={plantedOn}
+                      onChange={(e) => setPlantedOn(e.target.value)}
+                      placeholder="Planted On"
+                    />
+
                     <button>
                       Submit
                       <i className="fa-solid fa-arrow-right-long" />

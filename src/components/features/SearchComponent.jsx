@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+//import { useEffect } from 'react';
 import BlogCard from '../BlogCard';
 import "../../assets/NewFiles/Css/searchcomponent.css";
 
@@ -9,30 +10,70 @@ const SearchComponent = () => {
     uploadedBy: false,
     location: false,
   });
-  const [data, setData] = useState([]);
 
-  useEffect(() => {
-    // Retrieve data from local storage
-    const storedData = localStorage.getItem('formData'); // Replace 'yourLocalStorageKey' with your actual key
-    if (storedData) {
-      try {
-        const parsedData = JSON.parse(storedData);
-        // Convert the parsed data to match the data structure
-        console.log(parsedData);
-        const formattedData = parsedData.map(item => ({
-          treeName: item.label || 'Unknown', // Assuming 'label' corresponds to 'treeName'
-          uploadedBy: 'Unknown', // No equivalent field in parsedData, adjust as needed
-          uploadedOn: item.uploadedOn || 'Unknown', // No equivalent field in parsedData, adjust as needed
-          plantedOn: item.plantedOn || 'Unknown', // No equivalent field in parsedData, adjust as needed
-          location: item.location || 'Unknown',
-          image: item.imageURL || '/images/default.jpg', // Assuming 'imageURL' corresponds to 'image'
-        }));
-        setData(formattedData);
-      } catch (error) {
-        console.error('Error parsing stored data:', error);
-      }
-    }
-  }, []);
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   // Retrieve data from local storage
+  //    const storedData = localStorage.getItem('formData'); // Replace 'yourLocalStorageKey' with your actual key
+  
+    
+  //   if (storedData) {
+  //     try {
+  //       const parsedData = JSON.parse(storedData);
+  //       // Convert the parsed data to match the data structure
+  //       const formattedData = parsedData.map(item => ({
+  //         treeName: item.label || 'Unknown', // Assuming 'label' corresponds to 'treeName'
+  //         uploadedBy: 'Unknown', // No equivalent field in parsedData, adjust as needed
+  //         uploadedOn: item.uploadedOn || 'Unknown', // No equivalent field in parsedData, adjust as needed
+  //         plantedOn: item.plantedOn || 'Unknown', // No equivalent field in parsedData, adjust as needed
+  //         location: item.location || 'Unknown',
+  //         image: item.imageURL || '/images/default.jpg', // Assuming 'imageURL' corresponds to 'image'
+  //       }));
+  //       setData(formattedData);
+  //     } catch (error) {
+  //       console.error('Error parsing stored data:', error);
+  //     }
+  //   }
+  // }, []);
+
+  const data=[{
+    image:"images/Tree-images/mango.jpeg",
+    treeName:"Mango",
+    uploadedBy:"User 1",
+    location:"Janata Colony, Indore, Madhya Pradesh 452002",
+    plantedOn:"2024-06-23",
+    uploadedOn:"2024-06-23T08:57:03.405Z",
+},{
+  image:"images/Tree-images/Neem.jpeg",
+  treeName:"Neem",
+  uploadedBy:"User 2",
+  location:"Janata Colony, Indore, Madhya Pradesh 452002",
+  plantedOn:"2024-06-23",
+  uploadedOn:"2024-06-23T08:57:03.405Z",
+},{
+  image:"images/Tree-images/peepal.jpg",
+  treeName:"peepal",
+  uploadedBy:"User 3",
+  location:"Janata Colony, Indore, Madhya Pradesh 452002",
+  plantedOn:"2024-06-23",
+  uploadedOn:"2024-06-23T08:57:03.405Z",
+},{
+  image:"images/Tree-images/Neem.jpeg",
+  treeName:"Neem",
+  uploadedBy:"User 2",
+  location:"Janata Colony, Indore, Madhya Pradesh 452002",
+  plantedOn:"2024-06-23",
+  uploadedOn:"2024-06-23T08:57:03.405Z",
+},{
+  image:"images/Tree-images/peepal.jpg",
+  treeName:"peepal",
+  uploadedBy:"User 3",
+  location:"Janata Colony, Indore, Madhya Pradesh 452002",
+  plantedOn:"2024-06-23",
+  uploadedOn:"2024-06-23T08:57:03.405Z",
+},]
+
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
