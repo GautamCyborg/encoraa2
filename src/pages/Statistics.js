@@ -23,9 +23,14 @@ const Statistics = () => {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center", margin: "20px" }}>Statistics</h2>
+       <section className="bg-image pt-40 pb-40">
+            <div className="container">
+                <h2 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">Statistics</h2>
+               
+            </div>
+        </section>
 
-      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop:'30px'}}>
         <button 
           onClick={() => navigate("./chart")} 
           style={getButtonStyle("chart")}

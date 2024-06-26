@@ -173,13 +173,13 @@ const TreeMap = () => {
   };
   
   
-  const position = [21.9287902, 85.6404122]; // Center position for the map
+  const position = [20.5937, 78.9629]; // Center position for the map
 
   return (
     <MapContainer
       center={position}
-      zoom={15}
-      style={{ height: "100vh", width: "100%" }}
+      zoom={4}
+      style={{ height: "100vh", width: "100%"}}
     >
       <TileLayer
         url="https://tile.openstreetmap.de/{z}/{x}/{y}.png"

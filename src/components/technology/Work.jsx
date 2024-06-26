@@ -10,7 +10,7 @@ const Work = () => {
                     <div className="col-lg-8">
                         <div className="section-header m-0">
                             <h5 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s"><img
-                                    src="/images/icon/leaf.png" alt='leaf'/> TECHNOLOGY WE WORK</h5>
+                                    src="/images/icon/leaf.png" alt='leaf'style={{display:"inline"}}/> TECHNOLOGY WE WORK</h5>
                             <h2 className="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">We work together
                                 for bettering tomorrow</h2>
                         </div>

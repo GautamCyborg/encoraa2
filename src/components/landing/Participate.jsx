@@ -16,9 +16,9 @@ const Participate = () => {
         <div className="row">
           <div className="col-lg-12">
             <h5 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">
-              <img src="/images/icon/leaf.png" alt="leaf" /> HOW WE WORK
+              <img src="/images/icon/leaf.png" alt="leaf" style={{display:"inline"}}/> HOW WE WORK
             </h5>
-            <h2 className="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">
+            <h2 className="wow fadeInUp"  data-wow-duration="1.4s" data-wow-delay=".4s">
               We work together for bettering tomorrow
             </h2>
           </div>
@@ -40,35 +40,35 @@ const Participate = () => {
             
             <ul className="wow mt-4 fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s">
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon"/>
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Enterprise for Compliance of Regulatory Audit & Aggregation
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Data repository
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 O<sup>2</sup> repository (Certified by 3<sup>rd</sup> party
                 Auditing partners)
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Platform to transact and offset CO<sup>2</sup> with O<sup >2</sup >
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon"style={{display:"inline"}} />
 
                Generate compliance certificate (Approved by 3<sup>rd</sup>
                 party Auditing partners)
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Create reports, projections and analytics as per customer
                 needs
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon"style={{display:"inline"}} />
                 Build and generate awareness on national and international
                 forums and groups
               </li>
@@ -78,23 +78,23 @@ const Participate = () => {
             
             <ul className="wow mt-4 fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s">
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon"/>
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Comprehensive consulting
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon"style={{display:"inline"}} />
                 Executive Training & Orientation
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon"style={{display:"inline"}}/>
                 Certifications, Ratings and Metric
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Reports and Projections
               </li>
               <li>
-                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                <img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                 Create incubator with corporate or institutional partners
               </li>                  
             </ul>

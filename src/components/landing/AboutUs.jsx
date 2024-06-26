@@ -12,14 +12,14 @@ const AboutUs = () => {
   return (
     <section className="about pt-20 pb-20">
       <div className="about__leaf fall__animation">
-        <img src="/images/about/leaf.png" alt="leaf" />
+        <img src="/images/about/leaf.png" alt="leaf"/>
       </div>
       <div className="container">
         <div className="row align-items-center justify-content-between">
           <div className="col-xl-6">
             <div className="section-header mb-5">
               <h5 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">
-                <img src="/images/icon/leaf.png" alt="leaf" /> ABOUT US
+                <img src="/images/icon/leaf.png" alt="leaf" style={{display:"inline"}}/> ABOUT US
               </h5>
               <h2 className="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">
                 Environment & Sustainability

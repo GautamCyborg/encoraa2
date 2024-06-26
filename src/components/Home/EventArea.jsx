@@ -26,14 +26,14 @@ const EventArea = () => {
                         <h3 className="mt-20 mb-20">Transacting</h3>
                           <div className="row g-4">
                      <ul className="wow mt-4 fadeInDown" data-wow-duration="1.2s" data-wow-delay=".2s">
-                        <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                        <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                            Enables people to plant and grow trees, allowing them to sell their farmed carbon and other ecosystem services in the form of digital tokens on a global market. 
                         </li>
-                        <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                        <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}} />
                          Organisations and donors can locate individual trees and trade their ecological impact.
 
                         </li>
-                         <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" />
+                         <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>
                         Trees are periodically valued, tokenized and added to a wallet system. This enables third-party entities to buy each tree’s ecological impact directly from tree growers and resell it to donors and companies.
 
                         </li>

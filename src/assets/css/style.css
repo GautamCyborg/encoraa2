@@ -2131,6 +2131,7 @@ input {
     height: 45px;    
 */
 }
+
 .header-menu-bg a:hover {
   /*    background-color: var(--primary-color);*/
   background-color: #e70000;
@@ -2141,6 +2142,11 @@ input {
     height: 45px;
 */
 }
+
+.header-menu-bg.active a {
+  background-color: #8BC34A !important; /* Change this to your desired color */              /* Optional: Change text color for better visibility */
+}
+
 .header-wrapper .main-menu {
   position: relative;
   display: flex;
