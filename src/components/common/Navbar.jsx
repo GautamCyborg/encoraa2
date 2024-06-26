@@ -28,13 +28,18 @@ const Navbar = () => {
     }));
   };
 
+  const handleLinkClick = () => {
+    setMenuActive(false);
+    setSubMenuOpen({});
+  };
+
   return (
     <header className="header">
       <div className="header-section">
         <div className="container">
           <div className="header-wrapper">
             <div className="logo-menu">
-              <Link to="/"><img src={'/images/encoraa-logo-d.png'} alt="logo" /></Link>
+              <Link to="/" onClick={handleLinkClick}><img src={'/images/encoraa-logo-d.png'} alt="logo" /></Link>
             </div>
             <div className="header-bar d-xl-none" onClick={toggleMenu}>
               <span></span>
@@ -44,38 +49,38 @@ const Navbar = () => {
 
             <ul className={`main-menu ${menuActive ? 'active' : ''}`}>
               <li className={`header-menu-bg ${isActive('/') ? 'active' : ''}`}>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={handleLinkClick}>Home</Link>
               </li>
               <li className={`header-menu-bg ${pathname.includes('/services') ? 'active' : ''}`}>
                 <Link to="#" onClick={(e) => { e.preventDefault(); handleSubMenuToggle(1); }}>
                   Services<i className="fas fa-chevron-down"></i>
                 </Link>
                 <ul className={`sub-menu ${subMenuOpen[1] ? 'open' : ''}`}>
-                  <li><Link to="/Home" className={isActive('/Home') ? 'active' : ''}>Eco-Sustenance</Link></li>
-                  <li><Link to="/consulting" className={isActive('/consulting') ? 'active' : ''}>Consulting</Link></li>
-                  <li><Link to="/training" className={isActive('/training') ? 'active' : ''}>Training</Link></li>
+                  <li><Link to="/Home" className={isActive('/Home') ? 'active' : ''} onClick={handleLinkClick}>Eco-Sustenance</Link></li>
+                  <li><Link to="/consulting" className={isActive('/consulting') ? 'active' : ''} onClick={handleLinkClick}>Consulting</Link></li>
+                  <li><Link to="/training" className={isActive('/training') ? 'active' : ''} onClick={handleLinkClick}>Training</Link></li>
                 </ul>
               </li>
               <li className={`header-menu-bg ${isActive('/technology') ? 'active' : ''}`}>
-                <Link to="/technology">Technology</Link>
+                <Link to="/technology" onClick={handleLinkClick}>Technology</Link>
               </li>
               <li className={`header-menu-bg ${isActive('/TreeRegistry') ? 'active' : ''}`}>
-                <Link to="/TreeRegistry">Tree Registry</Link>
+                <Link to="/TreeRegistry" onClick={handleLinkClick}>Tree Registry</Link>
               </li>
               <li className={`header-menu-bg ${isActive('/trees') ? 'active' : ''}`}>
-                <Link to="/trees">Trees</Link>
+                <Link to="/trees" onClick={handleLinkClick}>Trees</Link>
               </li>
               <li className={`header-menu-bg ${isActive('/map') ? 'active' : ''}`}>
-                <Link to="/map">Map</Link>
+                <Link to="/map" onClick={handleLinkClick}>Map</Link>
               </li>
               <li className={`header-menu-bg ${pathname.includes('/statistics') ? 'active' : ''}`}>
-                <Link to="/statistics/chart">Statistics</Link>
+                <Link to="/statistics/chart" onClick={handleLinkClick}>Statistics</Link>
               </li>
               <li className={`header-menu-bg ${isActive('/upload') ? 'active' : ''}`}>
-                <Link to="/upload">Upload</Link>
+                <Link to="/upload" onClick={handleLinkClick}>Upload</Link>
               </li>
               <li className={`header-menu-bg ${isActive('/contact') ? 'active' : ''}`}>
-                <Link to="/contact">Contact Us</Link>
+                <Link to="/contact" onClick={handleLinkClick}>Contact Us</Link>
               </li>
             </ul>
           </div>
