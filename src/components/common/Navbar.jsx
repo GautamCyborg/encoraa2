@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { FaUser } from 'react-icons/fa';
 
 import '../../assets/css/bootstrap.min.css';
 import '../../assets/css/all.min.css';
@@ -12,6 +13,7 @@ import '../../assets/css/style.css';
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState({});
+  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
   const location = useLocation();
   const { pathname } = location;
 
@@ -31,6 +33,37 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setMenuActive(false);
     setSubMenuOpen({});
+    setProfileMenuOpen(false);
+  };
+
+  const handleProfileMenuToggle = () => {
+    setProfileMenuOpen(!profileMenuOpen);
+  };
+
+  const userLoggedIn = true; // Replace with actual login state check
+  const userProfilePicture = "/images/sprout.png"; // Replace with actual user profile picture path
+
+  const profileIconStyle = {
+    width: '40px',
+    height: '40px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+  };
+
+  const profileMenuStyle = {
+    position: 'absolute',
+    right: 0,
+    background: '#fff',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    zIndex: 1000, // Ensure the profile menu stays on top
+  };
+
+  const profileMenuItemStyle = {
+    padding: '10px 20px',
+    cursor: 'pointer',
+    borderBottom: '1px solid #ddd',
   };
 
   return (
@@ -81,6 +114,27 @@ const Navbar = () => {
               </li>
               <li className={`header-menu-bg ${isActive('/contact') ? 'active' : ''}`}>
                 <Link to="/contact" onClick={handleLinkClick}>Contact Us</Link>
+              </li>
+              <li className="header-menu-bg profile-menu" style={{ position: 'relative' }}>
+                <div className="profile-icon" onClick={handleProfileMenuToggle} style={profileIconStyle}>
+                  {userLoggedIn ? (
+                    <img src={userProfilePicture} alt="Profile" style={profileIconStyle} />
+                  ) : (
+                    <FaUser style={profileIconStyle} />
+                  )}
+                </div>
+                {profileMenuOpen && (
+                  <ul className="profile-sub-menu" style={profileMenuStyle}>
+                    {userLoggedIn ? (
+                      <>
+                        <li style={profileMenuItemStyle}><Link to="/profile" onClick={handleLinkClick}>Edit Profile</Link></li>
+                        <li style={profileMenuItemStyle}><Link to="/" onClick={handleLinkClick}>Logout</Link></li>
+                      </>
+                    ) : (
+                      <li style={profileMenuItemStyle}><Link to="/login" onClick={handleLinkClick}>Login</Link></li>
+                    )}
+                  </ul>
+                )}
               </li>
             </ul>
           </div>

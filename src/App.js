@@ -23,6 +23,7 @@ import UsersTable from "./components/stats/UsersTable";
 import LoginPage from "./pages/Login";
 import ForgetPasswordPage from "./pages/ForgetPassword";
 import SignupPage from "./pages/SignUp";
+import EditProfile from "./pages/EditProfile";
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             <Route path="login" element={<LoginPage/>} />
             <Route path="forget-password" element={<ForgetPasswordPage/>} />
             <Route path="signup" element={<SignupPage/>} />
+            <Route path="profile" element={<EditProfile/>} />
           </Routes>
         </div>
         <Footer/>
