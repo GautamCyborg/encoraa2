@@ -127,7 +127,7 @@ const Navbar = () => {
                   <ul className="profile-sub-menu" style={profileMenuStyle}>
                     {userLoggedIn ? (
                       <>
-                        <li style={profileMenuItemStyle}><Link to="/profile" onClick={handleLinkClick}>Edit Profile</Link></li>
+                        <li style={profileMenuItemStyle}><Link to="/profile" onClick={handleLinkClick}>Profile</Link></li>
                         <li style={profileMenuItemStyle}><Link to="/" onClick={handleLinkClick}>Logout</Link></li>
                       </>
                     ) : (
