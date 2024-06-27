@@ -12,7 +12,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    width: 400px;
+    width: 500px;
   }
   
   .signup-form h2 {
@@ -21,20 +21,22 @@
     text-align: center;
   }
   
-  .form-group {
+  .signup-form-group {
     margin-bottom: 15px;
   }
   
-  .form-group label {
+  .signup-form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bolder;
   }
   
-  .form-group input {
+  .signup-form-group input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #000;
   }
   
   .signup-button {
@@ -71,3 +73,13 @@
     margin-top: 5px;
   }
   
+  p{
+    display: inline;
+    padding: 5px;
+    font-weight: bold;
+    color: #525252;
+  }
+  .signup-navigation{
+    text-align: center;
+    display:flex
+  }

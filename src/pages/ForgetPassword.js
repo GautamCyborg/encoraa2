@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import '../assets/NewFiles/Css/ForgetPasswordPage.css';
 
 const ForgetPasswordPage = () => {
@@ -23,7 +25,7 @@ const ForgetPasswordPage = () => {
         <h2>Forget Password</h2>
         {step === 1 && (
           <>
-            <div className="form-group">
+            <div className="forget-form-group">
               <label>Email</label>
               <input
                 type="email"
@@ -38,7 +40,7 @@ const ForgetPasswordPage = () => {
         )}
         {step === 2 && (
           <>
-            <div className="form-group">
+            <div className="forget-form-group">
               <label>OTP</label>
               <input
                 type="text"
@@ -48,7 +50,7 @@ const ForgetPasswordPage = () => {
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="forget-form-group">
               <label>New Password</label>
               <input
                 type="password"
@@ -62,7 +64,13 @@ const ForgetPasswordPage = () => {
           </>
         )}
         {step === 3 &&<div style={{fontWeight:"bold"}}> Password reset successfully! <a href='/login' >Login Now</a></div>}
+
+        <div className='forget-navigation'>
+        <p>Already have an account? </p><Link to="/login" className="option-link">login</Link>
+        <p> Or </p><Link to="/Signup" className="option-link">Sign up Here</Link>
+        </div>
       </div>
+    
     </div>
   );
 };

@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import SearchComponent from '../components/features/SearchComponent';
 
 const EditProfile = () => {
   const [user, setUser] = useState({
-    profilePicture: '/path/to/profile/picture.jpg',
+    profilePicture: '/images/sprout.png',
     name: 'John Doe',
     email: 'john.doe@example.com'
   });
@@ -41,60 +42,68 @@ const EditProfile = () => {
   };
 
   return (
-    <div style={styles.container}>
-      <div style={styles.profileSection}>
-        <div style={styles.profilePictureWrapper}>
-          <img 
-            src={isEditing ? editedUser.profilePicture : user.profilePicture} 
-            alt="Profile" 
-            style={styles.profilePicture} 
-          />
-          {isEditing && (
-            <input 
-              type="file" 
-              accept="image/*" 
-              onChange={handleProfilePictureChange} 
-              style={styles.fileInput}
+    <>
+      <section className="bg-image pt-40 pb-40">
+        <div className="container">
+          <h2 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">Profile</h2>
+        </div>
+      </section>
+      <div style={styles.container}>
+        <div style={styles.profileSection}>
+          <div style={styles.profilePictureWrapper}>
+            <img 
+              src={isEditing ? editedUser.profilePicture : user.profilePicture} 
+              alt="Profile" 
+              style={styles.profilePicture} 
             />
-          )}
-        </div>
-        <div style={styles.profileInfo}>
-          {isEditing ? (
-            <>
+            {isEditing && (
               <input 
-                type="text" 
-                name="name" 
-                value={editedUser.name} 
-                onChange={handleChange} 
-                style={styles.input}
+                type="file" 
+                accept="image/*" 
+                onChange={handleProfilePictureChange} 
+                style={styles.fileInput}
               />
-              <input 
-                type="email" 
-                name="email" 
-                value={editedUser.email} 
-                onChange={handleChange} 
-                style={styles.input}
-              />
-            </>
-          ) : (
-            <>
-              <h2>{user.name}</h2>
-              <p>{user.email}</p>
-            </>
-          )}
-        </div>
-        <div style={styles.buttonContainer}>
-          {isEditing ? (
-            <>
-              <button onClick={handleSave} style={styles.button}>Save</button>
-              <button onClick={handleCancel} style={styles.button}>Cancel</button>
-            </>
-          ) : (
-            <button onClick={handleEdit} style={styles.button}>Edit Profile</button>
-          )}
+            )}
+          </div>
+          <div style={styles.profileInfo}>
+            {isEditing ? (
+              <>
+                <input 
+                  type="text" 
+                  name="name" 
+                  value={editedUser.name} 
+                  onChange={handleChange} 
+                  style={styles.input}
+                />
+                <input 
+                  type="email" 
+                  name="email" 
+                  value={editedUser.email} 
+                  onChange={handleChange} 
+                  style={styles.input}
+                />
+              </>
+            ) : (
+              <>
+                <h2>{user.name}</h2>
+                <p>{user.email}</p>
+              </>
+            )}
+          </div>
+          <div style={styles.buttonContainer}>
+            {isEditing ? (
+              <>
+                <button onClick={handleSave} style={styles.button}>Save</button>
+                <button onClick={handleCancel} style={styles.button}>Cancel</button>
+              </>
+            ) : (
+              <button onClick={handleEdit} style={styles.button}>Edit Profile</button>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+      <SearchComponent/> 
+    </>
   );
 };
 
@@ -102,20 +111,22 @@ const styles = {
   container: {
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-    minHeight: '70vh',
+    alignItems: 'start',
     backgroundColor: '#f4f4f4',
   },
   profileSection: {
+    display: 'flex',
+    alignItems: 'center',
+    width: '100%',
     backgroundColor: '#fff',
     padding: '20px',
     borderRadius: '10px',
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center'
+    margin: '0px 0',
   },
   profilePictureWrapper: {
     position: 'relative',
-    marginBottom: '20px'
+    marginRight: '20px'
   },
   profilePicture: {
     width: '150px',
@@ -133,7 +144,7 @@ const styles = {
     cursor: 'pointer'
   },
   profileInfo: {
-    marginBottom: '20px'
+    flexGrow: 1
   },
   input: {
     width: '100%',
@@ -147,11 +158,12 @@ const styles = {
     justifyContent: 'center'
   },
   button: {
+    fontWeight:'bold',
     padding: '10px 20px',
     margin: '0 10px',
     border: 'none',
     borderRadius: '5px',
-    backgroundColor: '#007bff',
+    backgroundColor: '#8BC34A',
     color: '#fff',
     cursor: 'pointer',
     transition: 'background-color 0.3s'
