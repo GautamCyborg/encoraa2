@@ -96,7 +96,7 @@ return (
                   <span style={{color:'black'}}>{row.country}</span>
                 ) : (
                   <a
-                    href="#"
+                    href="/"
                     style={aStyles}
                     onMouseOver={(e) => (e.target.style.textDecoration = aHoverStyles.textDecoration)}
                     onMouseOut={(e) => (e.target.style.textDecoration = aStyles.textDecoration)}

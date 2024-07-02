@@ -249,7 +249,7 @@ const Statistics = () => {
               </div>
               <div><br></br></div>
               <a
-                href="tree-registration.html"
+                href="/upload"
                 className="btn-one wow fadeInUp"
                 data-wow-duration="1.5s"
                 data-wow-delay=".5s"
