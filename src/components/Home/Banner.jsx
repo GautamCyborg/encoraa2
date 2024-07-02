@@ -14,7 +14,7 @@ const Banner = () => {
     <div> 
     <section className="bg-image pt-60 pb-60">
         <div className="container">
-            <h2 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">Eco - Sustenance</h2>
+            <h2 className="wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".2s">TRP - Tree Registry Platform</h2>
             
         </div>
     </section>

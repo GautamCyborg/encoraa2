@@ -17,28 +17,30 @@ const Achievements = () => {
             <div className="achievement__item">
               <h2 className="text-white pt-3 pb-3 gradient-color">
                 Our Trees have been Monitored
+               
               </h2>
             </div>
           </div>
           <div className="col-lg-2 achievement__bor-right wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">
             <div className="achievement__item text-center">
               <img src="/images/icon/achieve1.png" height="65px" alt="icon" />
-              <h5>Trees planted</h5>
+              <h5>Total Number Of Trees planted Till Now</h5>
               <span className="count">6,472,068</span>
             </div>
           </div>
           <div className="col-lg-2 achievement__bor-right wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".6s">
             <div className="achievement__item text-center">
               <img src="/images/icon/achieve2.png" height="65px" alt="icon" />
-              <h5>Families helped</h5>
+              <h5>Verified Families & Users </h5>
               <span className="count">38,768</span>
             </div>
           </div>
           <div className="col-lg-2 wow fadeInUp" data-wow-duration="1.8s" data-wow-delay=".8s">
             <div className="achievement__item text-center">
               <img src="/images/icon/achieve3.png" height="65px" alt="icon" />
-              <h5>CO<sup>2</sup> captured (tonne)</h5>
-              <span className="count">1,193,210</span>
+              <h5> Our Canopy Coverage</h5>
+               <span className="count">Country : 15</span><br/>
+               <span className="count">Cities : 183</span>
             </div>
           </div>
         </div>

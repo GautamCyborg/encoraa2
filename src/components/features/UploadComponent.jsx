@@ -132,41 +132,31 @@ const UploadComponent = () => {
           <div className="container">
             <div className="row g-4">
               <div className="col-lg-6">
-                <div className="content bg-image">
+                <div className="content bg-image-upload">
                   <h2>
-                    Have something in mind? <br />
-                    Let's talk.
+                   Plant Upload Procedure                    
                   </h2>
-                  <p>
-                    Adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim.
+
+                  <p>Kindly provide clear picture and geo location detail of plant images for higher accuracy.Watch the tutorial video for more information.
                   </p>
-                  <div className="arry">
-                    <img src="/images/icon/arry.png" alt="" />
-                  </div>
+                   
                   <ul>
-                    <li>
-                      <a
-                        href="https://www.google.com/maps/d/viewer?mid=1UZ57Drfs3SGrTgh6mrYjQktu6uY&amp;hl=en_US&amp;ll=18.672105000000013%2C105.68673800000003&amp;z=17"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <i className="fa-solid fa-location-dot"></i> 407 Payal
-                        Complex, B/s VSE, Sayajigunj, Vadodara-390005
-                      </a>
-                    </li>
-                    <li>
-                      <a href="tel:1-732-798-0976">
-                        <i className="fa-solid fa-phone-volume"></i>+91 9898 034
-                        029
-                      </a>
-                    </li>
-                    <li>
-                      <a href="mailto:company.info@mail.com">
-                        <i className="fa-solid fa-envelope"></i>info@encoraa.com
-                      </a>
-                    </li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>On your device, enable the location service. </li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>Verify that the camera has access to the location service.  </li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>Take pictures of plants with your phone. </li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>Check the image file details in your phone's gallery to see if the location is present in the captured images. </li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>For fast processing, copy the original photos to the computer. (Optional)</li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>Upload plant photos using the file uploader provided on this page</li>
+                    <li><img className="pe-2" src="/images/icon/leaf.png" alt="icon" style={{display:"inline"}}/>Our Team will Verify the image in First Come First Serve manner and will approve it for public listing</li>
+
                   </ul>
+
+                  <div className="col-lg-12">
+                    <div class="container-youtube">
+                      <iframe title="ytvideo" class="responsive-iframe" src="https://www.youtube.com/embed/AkbGz3CYvqE?&loop=1&autoplay=1&controls=0"></iframe>
+                    </div>
+                  </div>  
+
                 </div>
               </div>
               <div className="col-lg-6">

@@ -12,7 +12,7 @@ import '../../assets/css/style.css';
 
 const Navbar = () => {
   const [menuActive, setMenuActive] = useState(false);
-  const [subMenuOpen, setSubMenuOpen] = useState({});
+  // const [subMenuOpen, setSubMenuOpen] = useState({});
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
   const location = useLocation();
   const { pathname } = location;
@@ -23,16 +23,16 @@ const Navbar = () => {
     setMenuActive(!menuActive);
   };
 
-  const handleSubMenuToggle = (index) => {
-    setSubMenuOpen((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
+  // const handleSubMenuToggle = (index) => {
+  //   setSubMenuOpen((prev) => ({
+  //     ...prev,
+  //     [index]: !prev[index],
+  //   }));
+  // };
 
   const handleLinkClick = () => {
     setMenuActive(false);
-    setSubMenuOpen({});
+    // setSubMenuOpen({});
     setProfileMenuOpen(false);
   };
 
@@ -40,8 +40,8 @@ const Navbar = () => {
     setProfileMenuOpen(!profileMenuOpen);
   };
 
-  const userLoggedIn = true; // Replace with actual login state check
-  const userProfilePicture = "/images/sprout.png"; // Replace with actual user profile picture path
+  const userLoggedIn = true;
+  const userProfilePicture = "/images/sprout.png"; 
 
   const profileIconStyle = {
     width: '40px',
@@ -84,21 +84,9 @@ const Navbar = () => {
               <li className={`header-menu-bg ${isActive('/') ? 'active' : ''}`}>
                 <Link to="/" onClick={handleLinkClick}>Home</Link>
               </li>
-              <li className={`header-menu-bg ${pathname.includes('/services') ? 'active' : ''}`}>
-                <Link to="#" onClick={(e) => { e.preventDefault(); handleSubMenuToggle(1); }}>
-                  Services<i className="fas fa-chevron-down"></i>
-                </Link>
-                <ul className={`sub-menu ${subMenuOpen[1] ? 'open' : ''}`}>
-                  <li><Link to="/Home" className={isActive('/Home') ? 'active' : ''} onClick={handleLinkClick}>Eco-Sustenance</Link></li>
-                  <li><Link to="/consulting" className={isActive('/consulting') ? 'active' : ''} onClick={handleLinkClick}>Consulting</Link></li>
-                  <li><Link to="/training" className={isActive('/training') ? 'active' : ''} onClick={handleLinkClick}>Training</Link></li>
-                </ul>
-              </li>
-              <li className={`header-menu-bg ${isActive('/technology') ? 'active' : ''}`}>
-                <Link to="/technology" onClick={handleLinkClick}>Technology</Link>
-              </li>
+
               <li className={`header-menu-bg ${isActive('/TreeRegistry') ? 'active' : ''}`}>
-                <Link to="/TreeRegistry" onClick={handleLinkClick}>Tree Registry</Link>
+                <Link to="/TreeRegistry" onClick={handleLinkClick}>TRP - Tree Registry Platform</Link>
               </li>
               <li className={`header-menu-bg ${isActive('/trees') ? 'active' : ''}`}>
                 <Link to="/trees" onClick={handleLinkClick}>Trees</Link>
@@ -112,6 +100,9 @@ const Navbar = () => {
               <li className={`header-menu-bg ${isActive('/upload') ? 'active' : ''}`}>
                 <Link to="/upload" onClick={handleLinkClick}>Upload</Link>
               </li>
+              {/* <li className={`header-menu-bg ${isActive('/technology') ? 'active' : ''}`}>
+                <Link to="/technology" onClick={handleLinkClick}>Technology</Link>
+              </li> */}
               <li className={`header-menu-bg ${isActive('/contact') ? 'active' : ''}`}>
                 <Link to="/contact" onClick={handleLinkClick}>Contact Us</Link>
               </li>

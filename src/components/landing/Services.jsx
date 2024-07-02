@@ -11,91 +11,142 @@ import '../../assets/css/style.css'
 const Services = () => {
   return (
     <div> 
-    <section className="page-service sub-bg pt-80 pb-80">
+    <section className="page-service sub-bg pt-20">
     <div className="container">
+
+
+    <div className="section-header mb-5">                            
+                        <h2 className="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">How It Works ?</h2>
+                        <p className="wow fadeInUp " data-wow-duration="1.6s" data-wow-delay=".6s">
+                          Below are 3 easy step to participate in this movement</p>
+                    </div>
+
+
+
+    <div className="row g-4 pb-20">
+        <div
+          className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 wow fadeInDown"
+          data-wow-duration="1.2s"
+          data-wow-delay=".2s"
+        >
+          <div className="work__item">
+            <div className="work__item-icon">
+              <img src="/images/icon/work1.svg" alt="icon" />
+              <span className="gradient-number">01</span>
+            </div>
+            <h3><a href="tree-planting.html" className="text-white">Login To Your Account</a></h3>
+            {/* <p className="text-white">
+              Eco sustenance is at the heart of ENCORAA's mission. This service is designed to ensure the harmonious coexistence of human activities...
+            </p> 
+            <a className="work__item-arrow text-white" href="tree-planting.html"
+              ><i className="fa-solid fa-arrow-right"></i
+            ></a> */}
+            <div className="work__item-leaf">
+              <img src="/images/shape/work-leaf.png" alt="work-leaf" />
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 wow fadeInDown"
+          data-wow-duration="1.4s"
+          data-wow-delay=".4s"
+        >
+          <div className="work__item">
+            <div className="work__item-icon">
+              <img src="/images/icon/work2.svg" alt="icon" />
+              <span>02</span>
+            </div>
+            <h3><a href="consulting.html" className="text-white">Capture your tree photo</a></h3>
+            {/* <p className="text-white">
+              ENCORAA's consulting services are designed to help businesses navigate the complex landscape of environmental sustainability. 
+            </p>
+            <a className="work__item-arrow text-white" href="consulting.html"
+              ><i className="fa-solid fa-arrow-right"></i
+            ></a> */}
+            <div className="work__item-leaf">
+              <img src="/images/shape/work-leaf.png" alt="work-leaf" />
+            </div>
+          </div>
+        </div>
+        <div
+          className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 wow fadeInDown"
+          data-wow-duration="1.6s"
+          data-wow-delay=".6s"
+        >
+          <div className="work__item">
+            <div className="work__item-icon">
+              <img src="/images/icon/work3.svg" alt="icon" />
+              <span>03</span>
+            </div>
+            <h3><a href="training.html" className="text-white">Submit & Share Your Photo</a></h3>
+            {/* <p className="text-white">
+              ENCORAA believes in empowering businesses with the knowledge and skills required to champion environmental sustainability.
+
+            </p>
+            <a className="work__item-arrow text-white" href="training.html"
+              ><i className="fa-solid fa-arrow-right"></i
+            ></a> */}
+            <div className="work__item-leaf">
+              <img src="/images/shape/work-leaf.png" alt="work-leaf" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
         <div className="row g-4 align-items-center">
             <div className="col-xl-8">
                 <div className="page-service__right-item">
-                    <div className="section-header mb-5">                            
-                        <h2 className="wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".4s">What are SDG’s?</h2>
-                        <p className="wow fadeInUp " data-wow-duration="1.6s" data-wow-delay=".6s">
-                          The Sustainable Development Goals (SDGs) are a set of 17 interconnected global 
-                          objectives established by the United Nations in 2015. They aim to eradicate poverty, 
-                          protect the planet, and ensure peace and prosperity for all by 2030. The goals are:</p>
-                    </div>
+                    
                     <div className="row g-4">
-                        <div className="col-sm-6 wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay=".3s">
+                        <div className="col-sm-12 wow fadeInLeft" data-wow-duration="1.3s" data-wow-delay=".3s">
                             <ul>
-                                <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> No Poverty</li>
-                                <li><i className="fa-solid me-2 primary-color fa-gear"></i> Zero Hunger</li>
+                                <li><i className="fa-solid  me-2 primary-color fa-gear"></i>Participants can capture only photos of a newly planted tree, or sapling.</li>
+                                <li><i className="fa-solid me-2 primary-color fa-gear"></i>Long lasting varieties of trees are preferred and they must be planted in Mother Earth, not in pots.</li>
+                             
+                                <li><i className="fa-solid  me-2 primary-color fa-gear"></i>Selfies or photos with human faces will not be verified.</li>
+                                <li><i className="fa-solid  me-2 primary-color fa-gear"></i>Participants are required to give geolocation and camera permission to take the photos. </li>
+                            
+                                <li><i className="fa-solid me-2 primary-color fa-gear"></i>Your location and camera will be used only when you take photos of the plant.</li>
+                                <li><i className="fa-solid me-2 primary-color fa-gear"></i>Your photos will be verified after uploading. Any improper visuals will be removed.</li>
+                             
+                                <li><i className="fa-solid   me-2 primary-color fa-gear"></i>Any kind of spamming will lead to the disabling of your account.</li>
+                                 
                             </ul>
                         </div>
-                        <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.4s" data-wow-delay=".4s">
-                            <ul>
-                                <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Good Health and Well-being</li>
-                                <li><i className="fa-solid me-2 primary-color fa-gear"></i> Quality Education</li>
-                            </ul>
-                        </div>
-                        <div className="col-sm-6 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay=".5s">
-                            <ul>
-                                <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Gender Equality</li>
-                                <li><i className="fa-solid me-2 primary-color fa-gear"></i> Clean Water and Sanitation</li>
-                            </ul>
-                        </div>
-                        <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.6s" data-wow-delay=".6s">
-                            <ul>
-                                <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Affordable and Clean Energy</li>
-                                <li><i className="fa-solid me-2 primary-color fa-gear"></i> Decent Work and Economic Growth</li>
-                            </ul>
-                        </div>
-                        <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.6s" data-wow-delay=".6s">
-                          <ul>
-                              <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Industry, Innovation, and Infrastructure</li>
-                              <li><i className="fa-solid me-2 primary-color fa-gear"></i> Reduced Inequalities</li>
-                          </ul>
-                      </div>
-                      <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.6s" data-wow-delay=".6s">
-                        <ul>
-                            <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Sustainable Cities and Communities</li>
-                            <li><i className="fa-solid me-2 primary-color fa-gear"></i> Responsible Consumption and Production</li>
-                        </ul>
-                    </div>
-                    <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.6s" data-wow-delay=".6s">
-                      <ul>
-                          <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Climate Action</li>
-                          <li><i className="fa-solid me-2 primary-color fa-gear"></i> Life Below Water</li>
-                      </ul>
-                    </div>
-                    <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.6s" data-wow-delay=".6s">
-                      <ul>
-                          <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Life on Land</li>
-                          <li><i className="fa-solid me-2 primary-color fa-gear"></i> Peace, Justice, and Strong Institutions</li>
-                      </ul>
-                    </div>
-                    <div className="col-sm-6 wow fadeInRight" data-wow-duration="1.6s" data-wow-delay=".6s">
-                      <ul>
-                          <li><i className="fa-solid mb-4 me-2 primary-color fa-gear"></i> Partnerships for the Goals</li>
-                      </ul>
-                    </div>
+                         
                     </div>
                     <div className="section-header mb-5">                                                      
                       <p className="wow fadeInUp " data-wow-duration="1.6s" data-wow-delay=".6s">
-                        These goals recognize the interdependence of social, economic, and environmental sustainability, 
-                        and serve as a blueprint for addressing global challenges such as poverty, inequality, climate change, 
-                        environmental degradation, peace, and justice.</p>
+                      Kindly provide clear picture and geo location detail of plant images for higher accuracy.Watch the tutorial video for more information.
+                      <br/> <a
+                href="tree-registration.html"
+                className="btn-one wow fadeInUp"
+                data-wow-duration="1.5s"
+                data-wow-delay=".5s"
+              >
+                <span>Register your Tree</span>
+                <i className="fa-solid fa-angles-right"></i>
+              </a>
+                      </p>
                   </div>
+                  
+           
+             
                 </div>
             </div>
             <div className="col-xl-4">
                 <div className="image position-relative">
-                    <img src="/images/service/single6.jpg" alt="single"/>
-                    <div className="video__btn-wrp">
-                        <div className="video-btn video-pulse">
-                            <a className="video-popup secondary-bg"
-                                href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"><i
-                                    className="fa-solid fa-play"></i></a>
-                        </div>
-                    </div>
+                     
+                     
+                         
+                            <div className="container-youtube">
+                                 <iframe title="ytvideo" className="responsive-iframe" src="https://www.youtube.com/embed/AkbGz3CYvqE?&loop=1&autoplay=1&controls=0"></iframe>
+                            </div>
+                         
+                     
                 </div>
             </div>
         </div>

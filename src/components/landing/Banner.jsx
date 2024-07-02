@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useNavigate } from "react-router-dom";
 import '../../assets/css/bootstrap.min.css'
 import '../../assets/css/all.min.css'
 import '../../assets/css/swiper-bundle.min.css'
@@ -8,14 +9,22 @@ import '../../assets/css/animate.css'
 import '../../assets/css/nice-select.css'
 import '../../assets/css/style.css'
 
-import video from "../../assets/media/video1.mp4"
+// import video from "../../assets/media/video1.mp4"
+// import banner_img from "../../assets/images/banner/plant_bg_tree.jpg"
 
 const Banner = () => {
+  const navigate=useNavigate();
   return (
     <div className="banner1">
-      <video  muted className="bg-vid" width="600" height="300">
+       
+       
+
+       <img src="https://res.cloudinary.com/encoraaprp/image/upload/c_fill,h_960,w_2050/v1719862426/yc7rxjutgzn4qp9rwred.jpg" alt="strock-text" />
+
+       {/* <video  muted className="bg-vid" width="600" height="300">
         <source src={video} type="video/mp4" />
-      </video>
+      </video>      */}
+
       <div className="bg-overlay"></div>
       <div id="light">
         <div id="lineh1"></div>
@@ -58,7 +67,8 @@ const Banner = () => {
                     data-wow-delay=".2s"
                     style={{ fontSize: 'x-large', fontWeight: 'bold' }}
                   >
-                    Embrace the <span className="gradient-color-green">Green</span>, Sow the <span className="gradient-color-green">Future</span>
+                       
+                     Tree<span className="gradient-color-green">Tagging</span>, for a  <span className="gradient-color-green">Greener</span> Legacy
                   </h4>
                   <h1
                     className="wow fadeInUp text-white"
@@ -69,18 +79,23 @@ const Banner = () => {
                     better <span className="primary-color gradient-color">Today</span>
                   </h1>
                   <div className="row g-4 align-items-center">
-                    <div className="col-md-8">
+                    <div className="col-md-6">
                       <div className="wow fadeInUp" data-wow-duration="1.6s" data-wow-delay=".6s">
                         <p>
-                          ENCORAA ESG offers a 360 degree end to end support and
-                          management of carbon assets
+                           {/* ENCORAA ESG offers a 360 degree end to end support and management of carbon assets */}
+                           <span className="primary-color gradient-color"> TRP - Tree Registry Platorm</span>, Tree Tracking & Verification for a Sustainable Tomorrow for a Greener Legacy
                           </p>
                       </div>
                     </div>
-                    <div className="col-md-6">
-                        <button className="btn-grad"  data-wow-duration="1.5s"
-                        data-wow-delay=".5s">
-                            <span className="text-white">Discover with us</span>
+                    <div className="col-md-8">
+                        <button className="btn-grad-green"  data-wow-duration="1.5s"
+                        data-wow-delay=".5s" onClick={()=>{navigate('/upload')}}>
+                            <span className="text-white">Upload Tree  </span>
+                        <i className="fa-solid fa-angles-right"></i>
+                        </button>
+                        <button className="btn-grad-green"  data-wow-duration="1.5s"
+                        data-wow-delay=".5s" onClick={()=>{navigate('/Trees')}}>
+                            <span className="text-white">View All Tree</span>
                         <i className="fa-solid fa-angles-right"></i>
                         </button>
                     </div>
